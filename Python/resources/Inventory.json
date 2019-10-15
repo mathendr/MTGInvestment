@@ -1,0 +1,146 @@
+{
+    "Commander 2019 Set": {
+        "date_purchased": "8/12/2019",
+        "cost": 129.99,
+        "units": 1,
+        "total_cost": 129.99,
+        "current_value": 123.99,
+        "profit": -6
+    },
+    "Gideon's Spellbook": {
+        "date_purchased": "10/1/2019",
+        "cost": 18.39,
+        "units": 1,
+        "total_cost": 18.39,
+        "current_value": 18.72,
+        "profit": 0.33
+    },
+    "Core 19 Booster Packs": {
+        "date_purchased": "10/1/2019",
+        "cost": 3,
+        "units": 36,
+        "total_cost": 108,
+        "current_value": 3.15,
+        "profit": 5.4
+    },
+    "Guilds of Ravnica Booster Box": {
+        "date_purchased": "10/1/2019",
+        "cost": 88,
+        "units": 1,
+        "total_cost": 88,
+        "current_value": 90.79,
+        "profit": 2.79
+    },
+    "Commander M13 - Mind Seize": {
+        "date_purchased": "10/1/2019",
+        "cost": 50,
+        "units": 1,
+        "total_cost": 50,
+        "current_value": 57.92,
+        "profit": 7.92
+    },
+    "Spellslingers kit": {
+        "date_purchased": "10/1/2019",
+        "cost": 12,
+        "units": 1,
+        "total_cost": 12,
+        "current_value": 12.15,
+        "profit": 0.15
+    },
+    "Rivals Of Ixilan Pre-release": {
+        "date_purchased": "10/1/2019",
+        "cost": 20,
+        "units": 1,
+        "total_cost": 20,
+        "current_value": 21.26,
+        "profit": 1.26
+    },
+    "Core 2020 Pre-release": {
+        "date_purchased": "10/1/2019",
+        "cost": 18,
+        "units": 1,
+        "total_cost": 18,
+        "current_value": 18.88,
+        "profit": 0.88
+    },
+    "19 Foil Island": {
+        "date_purchased": "10/1/2019",
+        "cost": 0.3,
+        "units": 4,
+        "total_cost": 1.2,
+        "current_value": 0.33,
+        "profit": 0.12
+    },
+    "19 Foil Mountain": {
+        "date_purchased": "10/1/2019",
+        "cost": 0.3,
+        "units": 4,
+        "total_cost": 1.2,
+        "current_value": 0.34,
+        "profit": 0.16
+    },
+    "19 Foil Swamp": {
+        "date_purchased": "10/1/2019",
+        "cost": 0.25,
+        "units": 4,
+        "total_cost": 1,
+        "current_value": 0.29,
+        "profit": 0.16
+    },
+    "19 Foil Forest": {
+        "date_purchased": "10/1/2019",
+        "cost": 0.3,
+        "units": 4,
+        "total_cost": 1.2,
+        "current_value": 0.34,
+        "profit": 0.16
+    },
+    "19 Foil Plains": {
+        "date_purchased": "10/1/2019",
+        "cost": 0.3,
+        "units": 4,
+        "total_cost": 1.2,
+        "current_value": 0.37,
+        "profit": 0.28
+    },
+    "Angler Turtle": {
+        "date_purchased": "10/1/2019",
+        "cost": 0.25,
+        "units": 4,
+        "total_cost": 1,
+        "current_value": 0.29,
+        "profit": 0.16
+    },
+    "Vengeant Vampire": {
+        "date_purchased": "10/1/2019",
+        "cost": 0.6,
+        "units": 4,
+        "total_cost": 2.4,
+        "current_value": 0.61,
+        "profit": 0.04
+    },
+    "Immortal Phoenix": {
+        "date_purchased": "10/1/2019",
+        "cost": 0.2,
+        "units": 4,
+        "total_cost": 0.8,
+        "current_value": 0.26,
+        "profit": 0.24
+    },
+    "Angelic Guardian": {
+        "date_purchased": "10/1/2019",
+        "cost": 1.4,
+        "units": 4,
+        "total_cost": 5.6,
+        "current_value": 1.43,
+        "profit": 0.12
+    },
+    "Rampaging Brontodon": {
+        "date_purchased": "10/1/2019",
+        "cost": 5,
+        "units": 4,
+        "total_cost": 20,
+        "current_value": 5.9,
+        "profit": 3.6
+    }
+}

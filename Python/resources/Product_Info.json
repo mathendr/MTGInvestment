@@ -1,0 +1,62 @@
+{
+    "Commander 2019": {
+        "skus": 4128436,
+        "group_ID": 2481,
+        "product_ID": 193443
+    },
+    "Core 2019 packs": {
+        "skus": 3743646,
+        "group_ID": 2250,
+        "product_ID": 166551
+    },
+    "Guilds of Ravnica": {
+        "skus": 3826390,
+        "group_ID": 2290,
+        "product_ID": 173362
+    },
+    "Throne of Eldrane": {
+        "skus": 4142834,
+        "group_ID": 2494,
+        "product_ID": 194891
+    },
+    "Core 2020": {
+        "skus": 3998033,
+        "group_ID": 2441,
+        "product_ID": 188210
+    },
+    "Gideon Spellbook": {
+        "skus": 4007412,
+        "group_ID": 2447,
+        "product_ID": 188989
+    },
+    "War of the Spark": {
+        "skus": 3978689,
+        "group_ID": 2418,
+        "product_ID": 185676
+    },
+    "Ravnica Allegiance": {
+        "skus": 3913646,
+        "group_ID": 2366,
+        "product_ID": 180734
+    },
+    "Spellsliger Starter Kit": {
+        "skus": 4108742,
+        "group_ID": 2307,
+        "product_ID": 192755
+    },
+    "Commander 2013 mind seize": {
+        "skus": 1135434,
+        "group_ID": 1164,
+        "product_ID": 71515
+    },
+    "Rivals of ixalan pre-release pack": {
+        "skus": 3593912,
+        "group_ID": 2098,
+        "product_ID": 157613
+    },
+    "Core set 2020 pre release pack": {
+        "skus": 4125870,
+        "group_ID": 2441,
+        "product_ID": 193014
+    }
+}
