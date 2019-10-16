@@ -4,7 +4,7 @@
         "group_ID": 2481,
         "product_ID": 193443
     },
-    "Core 2019 packs": {
+    "Core Set 2019": {
         "skus": 3743646,
         "group_ID": 2250,
         "product_ID": 166551
@@ -14,17 +14,17 @@
         "group_ID": 2290,
         "product_ID": 173362
     },
-    "Throne of Eldrane": {
+    "Throne of Eldraine": {
         "skus": 4142834,
         "group_ID": 2494,
         "product_ID": 194891
     },
-    "Core 2020": {
-        "skus": 3998033,
+    "Core Set 2020": {
+        "skus": 4125870,
         "group_ID": 2441,
-        "product_ID": 188210
+        "product_ID": 193014
     },
-    "Gideon Spellbook": {
+    "Signature Spellbook: Gideon": {
         "skus": 4007412,
         "group_ID": 2447,
         "product_ID": 188989
@@ -39,24 +39,19 @@
         "group_ID": 2366,
         "product_ID": 180734
     },
-    "Spellsliger Starter Kit": {
+    "Spellslinger Starter Kit": {
         "skus": 4108742,
         "group_ID": 2307,
         "product_ID": 192755
     },
-    "Commander 2013 mind seize": {
+    "Commander 2013": {
         "skus": 1135434,
         "group_ID": 1164,
         "product_ID": 71515
     },
-    "Rivals of ixalan pre-release pack": {
+    "Rivals of Ixalan": {
         "skus": 3593912,
         "group_ID": 2098,
         "product_ID": 157613
-    },
-    "Core set 2020 pre release pack": {
-        "skus": 4125870,
-        "group_ID": 2441,
-        "product_ID": 193014
     }
 }

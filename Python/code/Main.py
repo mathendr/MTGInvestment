@@ -10,13 +10,14 @@
 import requests
 import json
 import sys
-sys.path.insert(1,'C:\\Users\\Matthew\\Desktop\\MTGInvestment\\Python\\code\\setup')
+sys.path.insert(1,'C:\\Users\\Matthew\\Desktop\\MTGInvestment\\Python\\MTGInvestment\\Python\\code\\setup')
 import Token_Generator
 import ProductSetup
-sys.path.insert(1,'C:\\Users\\Matthew\\Desktop\\MTGInvestment\\Python\\code\\products')
+sys.path.insert(1,'C:\\Users\\Matthew\\Desktop\\MTGInvestment\\Python\\MTGInvestment\\Python\\code\\products')
 import getInformation
-sys.path.insert(1,'C:\\Users\\Matthew\\Desktop\\MTGInvestment\\Python\\code\\save')
+sys.path.insert(1,'C:\\Users\\Matthew\\Desktop\\MTGInvestment\\Python\\MTGInvestment\\Python\\code\\save')
 import writeToFile
+import readFromFile
 
 
 skus = ProductSetup.getSkus()
@@ -43,12 +44,12 @@ def getPrice():
         count  = count +1
         
         
-
-    
-    
-    
-getInformation.getGroupId()
-getInformation.getProductId(2418)
+print()
+data = readFromFile.readProductSetup(getInformation.getGroupId())
+writeToFile.writeProductInfo(data)
+#getPrice()
+#getInformation.getGroupId()
+#getInformation.getProductId(2418)
     
     
 

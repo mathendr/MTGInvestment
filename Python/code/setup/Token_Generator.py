@@ -7,7 +7,7 @@ Token = ''
 
 def getNewToken():
     
-    with open('C:\\Users\\Matthew\\Desktop\\MTGInvestment\\Python\\resources\\keys.json') as json_file:
+    with open('C:\\Users\\Matthew\\Desktop\\MTGInvestment\\Python\\MTGInvestment\\Python\\resources\\keys.json') as json_file:
         data = json.load(json_file)
         global pub_key
         pub_key = data['pub_Key']

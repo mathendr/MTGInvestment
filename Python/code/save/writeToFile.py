@@ -1,13 +1,13 @@
 import requests
 import json
 import sys
-sys.path.insert(1,'C:\\Users\\Matthew\\Desktop\\MTGInvestment\\Python\\code\\products')
+sys.path.insert(1,'C:\\Users\\Matthew\\Desktop\\MTGInvestment\\Python\\MTGInvestment\\Python\\code\\products')
 import ProductSetup
 
 
 
 def writeProductInfo(product_name,skus,group_id,product_id):
-    with open('C:\\Users\\Matthew\\Desktop\\MTGInvestment\\Python\\resources\\Product_Info.json','w') as json_file:
+    with open('C:\\Users\\Matthew\\Desktop\\MTGInvestment\\Python\\MTGInvestment\\resources\\Product_Info.json','w') as json_file:
         count = 0
         data = {}
         for x in product_name:
@@ -15,9 +15,14 @@ def writeProductInfo(product_name,skus,group_id,product_id):
             count = count +1
         
         json.dump(data,json_file)   
+
+        
+def writeProductInfo(json_data):
+    with open('C:\\Users\\Matthew\\Desktop\\MTGInvestment\\Python\\MTGInvestment\\Python\\resources\\Product_Info.json','w') as json_file:
+        json.dump(json_data,json_file)
         
 def updateInventory(product_name,date_purchased,cost,units,total_cost,current_price,profit):
-    with open('C:\\Users\\Matthew\\Desktop\\MTGInvestment\\Python\\resources\\Inventory.json','w') as json_file:
+    with open('C:\\Users\\Matthew\\Desktop\\MTGInvestment\\Python\\MTGInvestment\\resources\\Inventory.json','w') as json_file:
         count = 0
         data = {}
         for x in product_name:

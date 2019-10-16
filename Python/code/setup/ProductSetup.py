@@ -8,7 +8,7 @@ group_id = []
 product_id = []
 
 def getPrices():
-    with open('C:\\Users\\Matthew\\Desktop\\MTGInvestment\\Python\\resources\\Product_Info.json') as json_file:
+    with open('C:\\Users\\Matthew\\Desktop\\MTGInvestment\\Python\\MTGInvestment\\Python\\resources\\Product_Info.json') as json_file:
         data = json.load(json_file)
         for x in data:
             global product_name
@@ -19,6 +19,7 @@ def getPrices():
             group_id.append(data[x]['group_ID'])
             global product_id
             product_id.append(data[x]['product_ID'])
+    json_file.close()
 
 def getSkus():
     global skus
