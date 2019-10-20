@@ -17,4 +17,9 @@ def readProductSetup(group_id):
         json_file.close()   
         return finaldata
             
-         
+        
+def readInventory():
+    finaldata = {}
+    with open('C:\\Users\\Matthew\\Desktop\\MTGInvestment\\Python\\MTGInvestment\\Python\\resources\\Inventory.json') as json_file:
+        data = json.load(json_file)
+        return data

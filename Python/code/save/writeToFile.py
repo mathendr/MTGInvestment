@@ -22,7 +22,7 @@ def writeProductInfo(json_data):
         json.dump(json_data,json_file)
         
 def updateInventory(product_name,date_purchased,cost,units,total_cost,current_price,profit):
-    with open('C:\\Users\\Matthew\\Desktop\\MTGInvestment\\Python\\MTGInvestment\\resources\\Inventory.json','w') as json_file:
+    with open('C:\\Users\\Matthew\\Desktop\\MTGInvestment\\Python\\MTGInvestment\\Python\\resources\\Inventory.json','w') as json_file:
         count = 0
         data = {}
         for x in product_name:
@@ -30,4 +30,6 @@ def updateInventory(product_name,date_purchased,cost,units,total_cost,current_pr
             count = count +1
         
         json.dump(data,json_file)
-    
+def updateInventory(data):
+    with open('C:\\Users\\Matthew\\Desktop\\MTGInvestment\\Python\\MTGInvestment\\Python\\resources\\Inventory.json','w') as json_file:
+        json.dump(data,json_file)

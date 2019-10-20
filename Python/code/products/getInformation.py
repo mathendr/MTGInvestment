@@ -53,12 +53,12 @@ def getProductId(groupID):
     
     
     
-def getSkus(groupID,productName):
-    url = "http://api.tcgplayer.com/v1.32.0/catalog/products"
-    querystring = {"categoryId":"1","groupId":groupID,"includeSkus":"true", "limit":"10000","productName": productName}
-    auth_app = requests.get(url,headers = headers,params = querystring)
+def getPrice(skus):
+    url = "http://api.tcgplayer.com/v1.32.0/pricing/sku/" + str(skus).replace("[","",1).replace("]","",1)
+    #querystring = {"categoryId":"1","groupId":groupID,"includeSkus":"true", "limit":"10000","productName": productName}
+    auth_app = requests.get(url,headers = headers)
     Json = json.loads(auth_app.text)
-    #print(Json)
+    return Json["results"]
     
 
 def groupIdURLHelper(offset):

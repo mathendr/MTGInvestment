@@ -27,35 +27,42 @@ product_id = ProductSetup.getProductID()
 prices = []
 headers = ProductSetup.getHeaders()
 
-
-       
-def getPrice():
-    global prices
-    prices = []
-    count = 0
-    for x in skus:
-        url = "http://api.tcgplayer.com/v1.32.0/pricing/sku/" + str(x)
-        auth_app = requests.get(url,headers = headers)
-
-        Json = json.loads(auth_app.text)
-        price = str(Json["results"][0]["marketPrice"])
-        prices.append(price)
-        print(price + " " + " " + (product_name[count]))
-        count  = count +1
         
+def checkInvestment():
+    inv = readFromFile.readInventory()
+    
+    profit = 0
+    skus = []
+    for x in inv:
+        num = inv[x]["skus"]
+        if num != -1:
+            skus.append(num)
         
-print()
-data = readFromFile.readProductSetup(getInformation.getGroupId())
-writeToFile.writeProductInfo(data)
+    priceData = getInformation.getPrice(skus)
+    
+    for x in priceData:
+        priceSku = x["skuId"]
+        mktPrice = x["marketPrice"]
+        for y in inv:
+            if inv[y]["skus"] != priceSku:
+                continue
+            else:
+                inv[y]["current_value"] = mktPrice
+                inv[y]["profit"] = float("{:.2f}".format((inv[y]["units"] * mktPrice) - (inv[y]["cost"]*inv[y]["units"])))
+                profit = profit + inv[y]["profit"]
+                
+    print("${:.2f}".format(profit))
+    writeToFile.updateInventory(inv)
+#print()
+#data = readFromFile.readProductSetup(getInformation.getGroupId())
+#writeToFile.writeProductInfo(data)
 #getPrice()
-#getInformation.getGroupId()
+
+#data = getInformation.getPrice(skus)
+#for x in data:
+    #print(x["marketPrice"])
 #getInformation.getProductId(2418)
     
-    
 
-
-
-
-
-#getPrice()
+checkInvestment()
 #writeToFile.writeProductInfo(product_name,skus,group_id,product_id)
