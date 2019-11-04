@@ -12,6 +12,9 @@ ProductInfo = []
 
 
 def getGroupId():
+    global GroupInfo
+    if len(GroupInfo) != 0:
+        return GroupInfo
     respond = groupIdURLHelper(0)
     items = respond['totalItems']
     pages = math.ceil(int(items)/100) 
@@ -19,7 +22,7 @@ def getGroupId():
     for x in range(0,pages):
         response = groupIdURLHelper(x*100)
         data = data +response['results']
-    global GroupInfo
+    
     GroupInfo = TrimGroupData(data)
     return GroupInfo
     #getAbreviationGroupID('WAR')
@@ -35,20 +38,24 @@ def getAbreviationGroupID(abrv):
     return 'NONE'
    
 def getProductId(groupID):
+    print("Retrieving Information...")
     respond = productIdURLHelper(0,groupID)
     items = respond['totalItems']
     pages = math.ceil(int(items)/100)
     data = []
+    print("Making Call...")
     for x in range(0,pages):
         respond = productIdURLHelper(x*100,groupID)
         data = data + respond['results']
     global ProductInfo
+    print("Cleaning Data...")
     ProductInfo = TrimProductData(data)
-    print(items)
-    print(len(ProductInfo))
+    #print(items)
+    #print(len(ProductInfo))
     
     #print(len(ProductInfo))
-    print(ProductInfo)
+    #print(ProductInfo)
+    return ProductInfo
     
     
     
@@ -75,8 +82,8 @@ def productIdURLHelper(offset,groupID):
 def TrimGroupData(data):
     for x in data:
         del x['isSupplemental']
-        del x['publishedOn']
         del x['modifiedOn']
+        x['publishedOn'] =x['publishedOn'][0:x['publishedOn'].index("T")]
         if x['abbreviation'] == None:
             x['abbreviation'] = x['name']
     return data
@@ -91,6 +98,7 @@ def TrimProductData(data):
         del x['imageUrl']
         del x['url']
         del x['modifiedOn']
+        
         newskus = []
         for y in x['skus']:
             if y != None:
