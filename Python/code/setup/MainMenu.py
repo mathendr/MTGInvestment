@@ -11,6 +11,8 @@ sys.path.insert(1,'C:\\Users\\Matthew\\Desktop\\MTGInvestment\\Python\\MTGInvest
 import writeToFile
 import readFromFile
 
+inventory = []
+
 def start():
     mainMenu()
     try:
@@ -47,7 +49,8 @@ def mainMenu():
     
 def checkInvestmentRefresh():
     inv = readFromFile.readInventory()
-    
+    global inventory
+    inventory = inv
     profit = 0
     TotalInvestment = 0;
     skus = []
@@ -108,6 +111,9 @@ def addInventory():
     #start()
 
 def getProductForInventory(groupID,p):
+    global inventory
+    inventory = readFromFile.readInventory()
+    
     print(groupID)
     products = []
     if p is None:
@@ -135,6 +141,22 @@ def getProductForInventory(groupID,p):
         getProductForInventory(groupID,products)
     else:
         print("You selected yes")
+        numUnits = int(input("How Many Units..."))
+        price = float(input("How Much $ Per Unit...."))
+        totalcost = numUnits*price
+        inner = {}
+        inner["date_purchased"] = "11/21/2019"
+        inner["cost"] = price
+        inner["units"] = numUnits
+        inner["total_cost"] = totalcost
+        inner["current_value"] = price
+        inner["profit"] = 0.00
+        inner["skus"] = selectedProduct['skus'][0]['skuId']
+        print(inner)
+        inventory[selectedProduct["name"]] = inner
+        writeToFile.updateInventory(inventory)
+        start()
+        
         
 def getans():
     ans = str(input("(y/n)..").lower())
